@@ -5,6 +5,10 @@ import Cart from '../Cart/Cart';
 
 const Home = () => {
     const[allCourses,setCourses]= useState([]);
+    const [selectedCourses, setSelectedCourses] = useState([]);
+  const [remaining, setRemaining] = useState(0);
+  const [totalCredit, setTotalCredit] = useState(0);
+
 useEffect(() => {
     fetch("./data.json")
     .then((res) => res.json())
@@ -15,7 +19,7 @@ useEffect(() => {
 
     return (
         <div>
-            <h1>Course Registration</h1>
+            <h1 className='course'>Course Registration</h1>
             <div className='home-container'>
             <div className='card-container'>
                {allCourses.map((course) => (
@@ -35,7 +39,7 @@ useEffect(() => {
                             <p className='info-detail'>Credit  : {course.credit}hr </p>
                             
                         </div>
-                        <button
+                        <button  onClick={() => handleSelectCourse(course)}
                 className="card-btn"
               >
                 Select
@@ -47,7 +51,10 @@ useEffect(() => {
                ))}
             </div>
             <div >
-                <Cart></Cart>
+                <Cart
+                 selectedCourses={selectedCourses}
+                 remaining={remaining}
+                 totalCredit={totalCredit}></Cart>
 
             </div>
             </div>

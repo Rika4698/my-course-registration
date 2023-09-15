@@ -3,4 +3,35 @@
 height: 355px;
 border-radius: 12px;
 background: #FFF;
+border: 1px solid white;
+}
+.title{
+    color: #2F80ED;
+font-size: 18px;
+font-weight: 700;
+margin: 24px;
+}
+.title-2{
+    color: #1C1B1B;
+font-size: 20px;
+font-weight: 700;
+margin-top: 16px;
+margin-left: 24px;
+}
+.title-3{
+    color: rgba(28, 27, 27, 0.80);
+font-size: 16px;
+font-weight: 500;
+margin-left: 24px;
+}
+.title-4{
+    color: rgba(28, 27, 27, 0.80);
+font-size: 16px;
+font-weight: 600;
+margin-left: 24px;
+}
+hr{
+    width: 252px;
+    height: 1px;
+    background-color:  rgba(28, 27, 27, 0.2)
 }
