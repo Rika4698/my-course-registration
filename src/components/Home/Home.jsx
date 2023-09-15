@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import './Home.css';
+import Cart from '../Cart/Cart';
 
 const Home = () => {
     const[allCourses,setCourses]= useState([]);
@@ -20,22 +21,33 @@ useEffect(() => {
                {allCourses.map((course) => (
                  <div key={course.id} className='card'>
                     <div className='card-img'>
-                        <img src={course.image} alt="" />
-                        <h2>{course.title}</h2>
-                        <p><small>{course.description}</small></p>
-                        <div>
-                            <img src={course.icon1} alt="" />
-                            <p>Price : {course.Price}</p>
-                            <img src={course.icon2} alt="" />
-                            <p>Credit  : {course.credit}hr </p>
+                        <img className='photo' src={course.image} alt="" />
                         </div>
+                        <h2>{course.title}</h2>
+                        <p className='detail'><small>{course.description}</small></p>
+                        <div className='info-container'>
+                            
+                            <img className='info-img' src={course.icon1} alt="" />
+                            <p className='info-detail'>Price : {course.Price}</p>
+                            
+                            <br />
+                            <img className='info-img' src={course.icon2} alt="" />
+                            <p className='info-detail'>Credit  : {course.credit}hr </p>
+                            
+                        </div>
+                        <button
+                className="card-btn"
+              >
+                Select
+              </button>
 
-                    </div>
+                    
 
                  </div>
                ))}
             </div>
-            <div className='cart'>
+            <div >
+                <Cart></Cart>
 
             </div>
             </div>

@@ -1,13 +1,65 @@
 h1{
     color: #1C1B1B;
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
+    text-align: center;
+}
+.home-container{
+    display: flex;
+    gap:30px;
 }
 .card{
-    width: 280px;
-height: 320px;
+    width: 312px;
+height: 400px;
 border-radius: 12px;
 background-color: #FFF;
-margin-top: 30px;
+}
+.card-container{
+    display: grid;
+    gap: 30px  ;
+    grid-template-columns:repeat(3,300px) ;
+    margin-left: 4px;
+    
+}
+.photo{
+    border-radius: 8px;
+    margin: 16px ;
+}
+h2{
+    color: #1C1B1B;
+font-size: 18px;
+font-weight: 600;
+margin: 0 16px;
+}
+.detail{
+    color: rgba(28, 27, 27, 0.60);
+font-size: 14px;
+font-weight: 400;
+margin: 4px 16px;
+}
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+}
+.info-img{
+    width:24px;
+    margin:0
+}
+.info-detail{
+    color: rgba(28, 27, 27, 0.60);
+    font-size: 16px;
+    font-weight: 500;
+}
+.card-btn{
+    width: 280px;
+height: 40px;
+border-radius: 8px;
+border: 1px solid #2F80ED;
+background: #2F80ED;
+margin:16px;
+color: #FFF;
+font-size: 18px;
+font-weight: 600;
 }
