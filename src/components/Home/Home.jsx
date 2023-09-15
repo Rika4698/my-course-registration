@@ -8,6 +8,8 @@ const Home = () => {
     const [selectedCourses, setSelectedCourses] = useState([]);
   const [remaining, setRemaining] = useState(20);
   const [totalCredit, setTotalCredit] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const fixedCredit = 20;
 
 useEffect(() => {
     fetch("./data.json")
@@ -16,11 +18,26 @@ useEffect(() => {
 },[])
 const handleSelectCourse = (course) => {
   const isExit =  selectedCourses.find((item) => item.id == course.id);
-  console.log(isExit);
+  let count = course.credit;
+  let price = course.Price;
   if(isExit){
-    return alert("alredy booked");
+    return alert("Already selected this course. ");
   }else{
-    setSelectedCourses([...selectedCourses,course]);
+    selectedCourses.forEach((item) => {
+        count += item.credit;
+        price += item.Price;
+    });
+    const totalRemaining = fixedCredit - count;
+    if(count > 20 && totalRemaining < 0){
+        alert("Total credit is 20 and no remaining credit ");
+    }
+    else{
+        setTotalCredit(count);
+        setRemaining(totalRemaining);
+        setTotalPrice(price);
+        setSelectedCourses([...selectedCourses,course]); 
+    }
+   
   }
     
     };
@@ -63,7 +80,12 @@ const handleSelectCourse = (course) => {
             </div>
             <div >
                 <Cart
-                 selectedCourses={selectedCourses}></Cart>
+                 selectedCourses={selectedCourses}
+                 remaining={remaining}
+                 totalCredit={totalCredit}
+                 totalPrice={totalPrice}>
+                    
+                 </Cart>
 
             </div>
             </div>

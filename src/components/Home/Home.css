@@ -19,6 +19,7 @@ background-color: #FFF;
     gap: 30px  ;
     grid-template-columns:repeat(3,300px) ;
     margin-left: 4px;
+    margin-top: 32px;
     
 }
 .photo{
