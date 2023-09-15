@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import './Home.css';
 import Cart from '../Cart/Cart';
 
@@ -21,7 +23,7 @@ const handleSelectCourse = (course) => {
   let count = course.credit;
   let price = course.Price;
   if(isExit){
-    return alert("Already selected this course. ");
+     toast.warn("Already selected this course.");
   }else{
     selectedCourses.forEach((item) => {
         count += item.credit;
@@ -29,7 +31,8 @@ const handleSelectCourse = (course) => {
     });
     const totalRemaining = fixedCredit - count;
     if(count > 20 && totalRemaining < 0){
-        alert("Total credit is 20 and no remaining credit ");
+        toast.warn("Total credit is 20 and no remaining credit ",{
+            theme : "dark", hideProgressBar:true} );
     }
     else{
         setTotalCredit(count);
@@ -72,11 +75,13 @@ const handleSelectCourse = (course) => {
               >
                 Select
               </button>
+              
 
                     
 
                  </div>
                ))}
+               <ToastContainer />
             </div>
             <div >
                 <Cart
