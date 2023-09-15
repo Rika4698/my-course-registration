@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart';
 const Home = () => {
     const[allCourses,setCourses]= useState([]);
     const [selectedCourses, setSelectedCourses] = useState([]);
-  const [remaining, setRemaining] = useState(0);
+  const [remaining, setRemaining] = useState(20);
   const [totalCredit, setTotalCredit] = useState(0);
 
 useEffect(() => {
@@ -14,6 +14,17 @@ useEffect(() => {
     .then((res) => res.json())
     .then((data) => setCourses(data));
 },[])
+const handleSelectCourse = (course) => {
+  const isExit =  selectedCourses.find((item) => item.id == course.id);
+  console.log(isExit);
+  if(isExit){
+    return alert("alredy booked");
+  }else{
+    setSelectedCourses([...selectedCourses,course]);
+  }
+    
+    };
+    //  selectedCourses.find((item) => item.id == course.id)};
 
 
 
@@ -52,9 +63,7 @@ useEffect(() => {
             </div>
             <div >
                 <Cart
-                 selectedCourses={selectedCourses}
-                 remaining={remaining}
-                 totalCredit={totalCredit}></Cart>
+                 selectedCourses={selectedCourses}></Cart>
 
             </div>
             </div>
