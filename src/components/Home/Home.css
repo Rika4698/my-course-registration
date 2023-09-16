@@ -1,3 +1,9 @@
+
+
+
+
+
+
 .course {
     color: #1C1B1B;
     font-size: 32px;
@@ -73,4 +79,51 @@ h2 {
     color: #FFF;
     font-size: 18px;
     font-weight: 600;
+}
+
+/* responsive for medium device */
+
+@media screen and (min-width:576px) and (max-width: 960px)
+{
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        background-color: #F3F3F3; 
+        width: 100%;
+      }
+      
+    .card-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 300px);
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+    
+    }
+    .home-container {
+        display: inline;
+        gap: 30px;
+
+    }
+
+}
+/* Responsive for small device */
+
+@media screen and (max-width:576px)
+{
+    .card-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(1, 300px);
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+    
+    }
+    .home-container {
+        display: inline;
+        gap: 30px;
+
+    }
 }

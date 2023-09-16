@@ -54,3 +54,35 @@ li {
     margin-left: 4px;
 
 }
+
+/* responsive for medium device */
+
+@media screen and (min-width:576px) and (max-width: 960px)
+{
+
+    .c-container {
+            width: 300px;
+            min-height: 355px;
+            border-radius: 12px;
+            background: #FFF;
+            border: 1px solid white;
+            margin-top: 60px;
+            margin-left: 200px;
+        
+    }
+}
+
+/* Responsive for small device */
+@media screen and (max-width:576px)
+{
+    .c-container {
+        width: 300px;
+        min-height: 355px;
+        border-radius: 12px;
+        background: #FFF;
+        border: 1px solid white;
+        margin-top: 60px;
+        margin-left: 40px;
+    
+}
+}
