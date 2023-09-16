@@ -1,49 +1,56 @@
-.c-container{
-    
+.c-container {
+
     width: 300px;
-min-height: 355px;
-border-radius: 12px;
-background: #FFF;
-border: 1px solid white;
-margin-top: 32px;
+    min-height: 355px;
+    border-radius: 12px;
+    background: #FFF;
+    border: 1px solid white;
+    margin-top: 32px;
 }
-.title{
+
+.title {
     color: #2F80ED;
-font-size: 18px;
-font-weight: 700;
-margin: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 24px;
 }
-.title-2{
+
+.title-2 {
     color: #1C1B1B;
-font-size: 20px;
-font-weight: 700;
-margin-top: 16px;
-margin-left: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-left: 24px;
 }
-.title-3{
+
+.title-3 {
     color: rgba(28, 27, 27, 0.80);
-font-size: 16px;
-font-weight: 500;
-margin-left: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 24px;
 }
-.title-4{
+
+.title-4 {
     color: rgba(28, 27, 27, 0.80);
-font-size: 16px;
-font-weight: 600;
-margin-left: 24px;
-margin-bottom: 32px;
-margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 24px;
+    margin-bottom: 32px;
+    margin-top: 20px;
 }
-hr{
+
+hr {
     width: 254px;
     height: 1px;
-    background-color:  rgba(28, 27, 27, 0.2);
+    background-color: rgba(28, 27, 27, 0.2);
 }
-.list-name,li{
+
+.list-name,
+li {
     color: rgba(28, 27, 27, 0.60);
-font-size: 16px;
-font-weight: 400;
-margin-top: 10px;
-margin-left: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 4px;
 
 }
